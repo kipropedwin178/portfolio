@@ -1,0 +1,45 @@
+.portfolio-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #071a2b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-navbar .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio-logo {
+  color: #22c55e;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.portfolio-links {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.portfolio-links a {
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.portfolio-links a:hover {
+  color: #22c55e;
+}
+
+@media (max-width: 768px) {
+  .portfolio-links {
+    gap: 15px;
+  }
+}

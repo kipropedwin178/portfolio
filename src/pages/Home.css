@@ -1,0 +1,67 @@
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.hero-text h3 {
+  color: #22c55e;
+  margin-bottom: 15px;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #cbd5e1;
+}
+
+.hero-text p {
+  max-width: 700px;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-projects,
+.btn-contact {
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-projects {
+  background-color: #22c55e;
+  color: white;
+}
+
+.btn-contact {
+  border: 2px solid #22c55e;
+  color: #22c55e;
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+}
