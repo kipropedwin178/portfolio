@@ -1,3 +1,4 @@
+
 .portfolio-navbar {
   position: sticky;
   top: 0;
@@ -9,29 +10,40 @@
 .portfolio-navbar .container {
   max-width: 1200px;
   margin: auto;
-  padding: 18px 20px;
-
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .portfolio-logo {
-  color: #22c55e;
-  font-size: 1.5rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.portfolio-logo-image {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
 }
 
 .portfolio-links {
   display: flex;
+  align-items: center;
   gap: 30px;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .portfolio-links a {
   color: white;
   font-weight: 500;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .portfolio-links a:hover {
@@ -39,7 +51,37 @@
 }
 
 @media (max-width: 768px) {
+  .portfolio-navbar .container {
+    padding: 10px 15px;
+  }
+
+  .portfolio-logo-image {
+    width: 45px;
+    height: 45px;
+  }
+
   .portfolio-links {
     gap: 15px;
+  }
+
+  .portfolio-links a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-navbar .container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .portfolio-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portfolio-links a {
+    font-size: 0.85rem;
   }
 }

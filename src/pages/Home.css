@@ -6,8 +6,19 @@
 
 .hero-content {
   max-width: 1200px;
+  width: 100%;
   margin: auto;
   padding: 60px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 700px;
 }
 
 .hero-text h3 {
@@ -44,6 +55,8 @@
   padding: 12px 25px;
   border-radius: 8px;
   font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn-projects {
@@ -51,17 +64,164 @@
   color: white;
 }
 
+.btn-projects:hover {
+  background-color: #16a34a;
+  color: white;
+  transform: translateY(-2px);
+}
+
 .btn-contact {
   border: 2px solid #22c55e;
   color: #22c55e;
 }
 
+.btn-contact:hover {
+  background-color: #22c55e;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Circular Profile Photo */
+
+.hero-image {
+  flex: 0 0 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-wrapper {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  padding: 7px;
+  background-color: #22c55e;
+  box-shadow: 0 0 45px rgba(34, 197, 94, 0.2);
+  overflow: hidden;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  /*
+    Keeps the photo circular while cropping the image
+    so the visible area focuses on the upper body.
+  */
+  object-fit: cover;
+
+  /*
+    Move the crop upward so the head and chest remain visible.
+    Adjust this value if necessary.
+  */
+  object-position: center 25%;
+
+  border-radius: 50%;
+  border: 5px solid #071a2b;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .hero-content {
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-image {
+    flex: 0 0 300px;
+  }
+
+  .hero-image-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Mobile */
+
 @media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
   .hero-text h1 {
     font-size: 2.5rem;
   }
 
   .hero-text h2 {
     font-size: 1.3rem;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    flex: none;
+  }
+
+  .hero-image-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 45px 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.15rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-image-wrapper {
+    width: 210px;
+    height: 210px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-projects,
+  .btn-contact {
+    width: 100%;
   }
 }

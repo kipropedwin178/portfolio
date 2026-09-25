@@ -4,9 +4,13 @@ function Navbar() {
   return (
     <nav className="portfolio-navbar">
       <div className="container">
-        <div className="portfolio-logo">
-          Edwin Kiprop
-        </div>
+        <a href="#home" className="portfolio-logo">
+          <img
+            src="/logopo.jpeg"
+            alt="Edwin Kiprop Logo"
+            className="portfolio-logo-image"
+          />
+        </a>
 
         <ul className="portfolio-links">
           <li>

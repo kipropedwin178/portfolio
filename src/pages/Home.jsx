@@ -12,10 +12,9 @@ function Home() {
           <h2>Software Engineer | Full-Stack Developer</h2>
 
           <p>
-            I build modern web applications using React,
-            FastAPI, PostgreSQL, and secure backend systems.
-            My focus is creating practical digital solutions
-            that help businesses grow and operate efficiently.
+            I build modern web applications using React, FastAPI, PostgreSQL,
+            and secure backend systems. My focus is creating practical digital
+            solutions that help businesses grow and operate efficiently.
           </p>
 
           <div className="hero-buttons">
@@ -26,6 +25,15 @@ function Home() {
             <a href="#contact" className="btn-contact">
               Contact Me
             </a>
+          </div>
+        </div>
+
+        <div className="hero-image">
+          <div className="hero-image-wrapper">
+            <img
+              src="/20221027143252_IMG_6764.jpg"
+              alt="Edwin Kiprop - Software Engineer"
+            />
           </div>
         </div>
       </div>
